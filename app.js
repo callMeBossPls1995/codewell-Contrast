@@ -3,7 +3,7 @@ const cards = document.querySelector(".cards");
 
 const defaultCategory = "fonts";
 
-fetch("/assets/resources/fonts/fonts.json")
+fetch("./assets/resources/fonts/fonts.json")
   .then((res) => res.json())
   .then((data) => displayCategory(data));
 
@@ -33,7 +33,7 @@ sorts.forEach((s) => {
     s.classList.add("active");
     const sortType = s.innerText;
 
-    fetch(`/assets/resources/${sortType}/${sortType}.json`)
+    fetch(`./assets/resources/${sortType}/${sortType}.json`)
       .then((data) => data.json())
       .then((res) => displayCard(res, sortType));
   });
