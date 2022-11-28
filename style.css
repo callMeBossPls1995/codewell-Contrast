@@ -424,6 +424,10 @@ footer .content {
     margin-bottom: 1rem;
   }
 
+  .newsletter input[type="email"] {
+    margin: 0.5rem 0;
+  }
+
   .newsletter > span {
     width: 60%;
     margin: auto;
