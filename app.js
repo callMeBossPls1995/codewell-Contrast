@@ -3,7 +3,7 @@ const cards = document.querySelector(".cards");
 
 const defaultCategory = "fonts";
 
-fetch("./assets/resources/fonts/fonts.json")
+fetch("assets/resources/fonts/fonts.json")
   .then((res) => res.json())
   .then((data) => displayCategory(data));
 
@@ -17,7 +17,7 @@ function displayCategory(catagory) {
 
     card.className = "card";
     card.innerHTML = `
-        <span><img src='./assets/resources/${defaultCategory}/${i.Icon}'/></span>
+        <span><img src='assets/resources/${defaultCategory}/${i.Icon}'/></span>
         <h4 class="title">${i.Title}</h4>
         <p class="content">${i.Description}</p>
         <a href="${i.Link}">Visit Resource</a>
@@ -33,7 +33,7 @@ sorts.forEach((s) => {
     s.classList.add("active");
     const sortType = s.innerText;
 
-    fetch(`./assets/resources/${sortType}/${sortType}.json`)
+    fetch(`assets/resources/${sortType}/${sortType}.json`)
       .then((data) => data.json())
       .then((res) => displayCard(res, sortType));
   });
@@ -50,7 +50,7 @@ function displayCard(items, sortType) {
     card.className = "card";
     card.innerHTML = `
         <span>
-          <img src='./assets/resources/${sortType}/${i.Icon}'/>
+          <img src='assets/resources/${sortType}/${i.Icon}'/>
         </span>
         <h4 class="title">${i.Title}</h4>
         <p class="content">${i.Description}</p>
