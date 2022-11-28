@@ -72,3 +72,5 @@ function toggleHamburger() {
 
   nav.classList.toggle("active");
 }
+
+// fixing asset path for git
