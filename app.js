@@ -3,7 +3,7 @@ const cards = document.querySelector(".cards");
 
 const defaultCategory = "fonts";
 
-fetch("assets/resources/fonts/fonts.json")
+fetch("tree/main/assets/resources/fonts/fonts.json")
   .then((res) => res.json())
   .then((data) => displayCategory(data));
 
@@ -17,7 +17,7 @@ function displayCategory(catagory) {
 
     card.className = "card";
     card.innerHTML = `
-        <span><img src='assets/resources/${defaultCategory}/${i.Icon}'/></span>
+        <span><img src='tree/main/assets/resources/${defaultCategory}/${i.Icon}'/></span>
         <h4 class="title">${i.Title}</h4>
         <p class="content">${i.Description}</p>
         <a href="${i.Link}">Visit Resource</a>
