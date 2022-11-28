@@ -17,7 +17,7 @@ function displayCategory(catagory) {
 
     card.className = "card";
     card.innerHTML = `
-        <span><img src='/assets/resources/${defaultCategory}/${i.Icon}'/></span>
+        <span><img src='./assets/resources/${defaultCategory}/${i.Icon}'/></span>
         <h4 class="title">${i.Title}</h4>
         <p class="content">${i.Description}</p>
         <a href="${i.Link}">Visit Resource</a>
@@ -50,7 +50,7 @@ function displayCard(items, sortType) {
     card.className = "card";
     card.innerHTML = `
         <span>
-          <img src='/assets/resources/${sortType}/${i.Icon}'/>
+          <img src='./assets/resources/${sortType}/${i.Icon}'/>
         </span>
         <h4 class="title">${i.Title}</h4>
         <p class="content">${i.Description}</p>
